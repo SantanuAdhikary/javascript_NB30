@@ -120,7 +120,7 @@ console.log(arr4)
 
 // by using this method we can remove, add and modify the array elements.
 
-// it can take 3 parameters (startIndex, delteCount, replacementValue)
+// it can take 3 parameters (startIndex, deleteCount, replacementValue)
 
 // this method will modify the orignal array. 
 
@@ -141,3 +141,167 @@ let arr7 = [10,20,30,40,50,60,70]
 arr7.splice(2,0,25)
 
 console.log(arr7)
+
+
+// !   HigherOrder Array Methods 
+
+
+// !  1. forEach()
+
+// forEach() is higherOrder array method , it is used for traversing the array.
+// it will take one callback function where it can take 3 parameters (element, index, array)
+
+let numbers = [10,20,30,40,50]
+
+numbers.forEach((ele, index, array)=>{
+
+    console.log(ele,index, array)
+})
+
+
+// [110,120,130,140,150]
+
+
+let arr8=[]
+
+numbers.forEach((ele)=>{
+
+    // console.log(ele + 100)
+
+    arr8.push(ele+100)
+})
+
+console.log(arr8)
+
+
+
+// ! 2. map()
+
+// map() is higherorder array method , it is used to traverse the array and we can perform any operation with all the elements. 
+
+// it can take 3 parameters. 
+
+// it will return one new array.
+
+
+let mappedArr = numbers.map((ele,index,arr)=>{
+//   console.log(ele,index,arr)
+
+  return ele + 100
+})
+
+console.log(mappedArr)
+
+
+let users = ["virat","rohit","iyer"]
+
+
+let USERS = users.map((ele)=>{
+     return ele.toUpperCase()
+})
+
+console.log(USERS)
+
+
+
+// !  3. filter()
+
+// filter() is higherorder array method it is used to traverse and check the condition. 
+// if the condition is maching then it will return that element.
+// it can take 3 parameters.
+
+let nums = [5,10,15,20]
+
+
+let greater =  nums.filter((ele)=>{
+     return ele > 10
+ })
+
+ console.log(greater)
+
+
+//  !  add all the numbers of the array 
+
+ let sum = 0 
+
+ nums.map((ele)=>{
+    sum = sum + ele
+ })
+
+ console.log(sum)
+
+
+// ! 4. reduce()
+
+// reduce() is higherOrder array method , it is used to reducing the array into single value.
+// it can take 4 parameters (acc,ele,index,arr)
+
+let sum2 = nums.reduce((acc, ele)=>{
+     return acc + ele
+ },0)
+
+ console.log(sum2)
+
+
+ let multiply = nums.reduce((acc,ele)=>{
+      return acc * ele
+ },1)
+
+ console.log(multiply)
+
+
+//  ! 5. sort()
+
+// this method is used to arrange the array in ascending or descending order.
+
+// it will take two parameters.
+
+// firstPara- secondPara = > ascending order 
+// secondPara - firstPara = > descending order
+
+let arr9 = [5,1,4,8,2,40]
+
+let asc = arr9.sort((x,y)=>{
+   return x - y
+})
+console.log(asc)
+
+let dsc = arr9.sort((x,y)=> y-x )
+console.log(dsc)
+
+
+
+//! find the elements which are greater than 30 then add 100 with them. then add those numbers.
+
+let arr10 = [10,20,30,40,50]
+
+// output => 290
+
+// [40,50]
+// [140,150]
+// 290
+
+
+let f = arr10.filter((ele)=>{
+    return ele > 30
+})
+console.log(f)
+
+let m = f.map((ele)=>{
+    return ele + 100
+})
+console.log(m)
+
+let r = m.reduce((acc,ele)=>{
+    return acc + ele
+})
+console.log(r)
+
+let result = arr10.filter((ele) => ele > 30).map((ele)=> ele + 100).reduce((acc,ele)=> acc+ele)
+
+console.log(result)
+
+
+
+
+

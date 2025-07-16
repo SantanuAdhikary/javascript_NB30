@@ -139,3 +139,38 @@ let student = {
 }
 
 console.log(student)
+
+
+
+// !  variable hoisting 
+
+
+// if we are accessing any variable before its declarion, and the variable has declared by var keyword then this declaration part will be moving to the top and it will give the output as undefined. it is called variable hoisting.
+
+// variable hoisting is possible for only var keyword not for let and const.
+
+
+console.log(a)
+
+var a = 30
+
+
+
+
+
+if(true)
+{
+    let b = 20
+    const c = 30 
+    var d = 40
+    console.log("inside if block")
+    console.log(b)
+    console.log(c)
+    console.log(d)
+}
+
+console.log("outside if block")
+
+// console.log(b)
+// console.log(c)
+console.log(d)
