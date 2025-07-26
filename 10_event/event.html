@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event </title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        nav{
+            height: 80px;
+            background-color: black;
+            color:white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        nav > ul{
+            display: flex;
+            gap:20px;
+        }
+
+        nav > ul > li{
+            list-style: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: color 0.4s ease-in;
+            &:hover{
+                color: orangered;
+            }
+        }
+
+        nav > button{
+            padding: 10px 20px;
+            border: none;
+            background-color: orangered;
+            color:white;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+              text-transform: uppercase;
+            transition: background-color 0.4s ease-in;
+
+            &:hover{
+                background-color: orange;
+            }
+        }
+
+        main{
+            height: 200px;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap:10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2> EVENT</h2>
+
+        <ul>
+            <li>event handler</li>
+            <li> event listener</li>
+
+        </ul>
+
+        <button onclick="login()"> login</button>
+    </nav>
+    
+
+    <main onmouseover="changeColor()" onmouseleave="changeColor2()">
+          <h1> Event In Javascript</h1>
+          <p> Lorem ipsum dolor sit amet consectetur.</p>
+          <button> know More</button>
+    </main>
+
+
+
+    <script src="./event.js"></script>
+</body>
+</html>
