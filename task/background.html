@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theme change</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .outer{
+            height: 100vh;
+            position: relative;
+            background-color: antiquewhite;
+            
+        }
+
+        button{
+            position: absolute;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn1{
+            
+            left:0
+        }
+        .btn2{
+            
+            right:0
+        }
+        .btn3{
+            
+            right:0;
+            bottom:0;
+        }
+        .btn4{
+            
+            
+            bottom:0;
+        }
+
+        .btn5{
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .dark{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="outer">
+         <button class="btn1" onclick="changeBackground('red')">red</button>
+         <button class="btn2" onclick="changeBackground('green')">green</button>
+         <button class="btn3" onclick="changeBackground('blue')">blue</button>
+         <button class="btn4" onclick="changeBackground('yellow')">yellow</button>
+         <button class="btn5" onclick="themeChange()"> changeTheme </button>
+    </div>
+
+
+    <script src="./background.js"></script>
+</body>
+</html>
