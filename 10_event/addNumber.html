@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> add numbers</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .outer{
+            height: 100vh;
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner{
+            width: 350px;
+            background-color: black;
+            color:white;
+            border-radius: 20px;
+            padding: 20px 20px;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 8px;
+            display: block;
+            border-radius: 10px;
+            letter-spacing: 1.4px;
+        }
+        label{
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1.4px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: #555;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color:white;
+            border-radius: 10px;
+            border: none;
+        }
+
+        select{
+            position: absolute;
+            top:10px;
+            right: 10px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="outer">
+        <div class="inner">
+            <form action="">
+                <label for="">Number 1</label>
+                <input type="text" id="num1" placeholder="enter number 1">
+                <label for="">Number 2</label>
+                <input type="text" id="num2" placeholder="enter number 2">
+
+                <button>add</button>
+            </form>
+        </div>
+        <div class="output">
+
+        </div>
+
+
+        <select name="" id="">
+            <option value="">select color</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="yellow">yellow</option>
+        </select>
+    </div>
+
+    <script src="./addNumber.js"></script>
+</body>
+</html>
