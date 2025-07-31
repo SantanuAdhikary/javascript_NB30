@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> event listener</title>
+
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         header{
+            height: 100px;
+            background-color: antiquewhite;
+            text-align: center;
+         }
+
+         section{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+            background-color: aquamarine;
+         }
+
+         section > .card{
+             width: 300px;
+             height: 160px;
+             border: 2px solid;
+             background-color: white;
+             padding: 10px 20px;
+             
+         }
+
+         article{
+            height: 140px;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:10px;
+         }
+
+         article > input{
+            padding: 10px;
+         }
+
+         article > .output{
+            height: 50px;
+            width:400px;
+            border: 2px solid;
+         }
+    </style>
+</head>
+<body>
+    
+     <header>
+          <h1>  Event </h1>
+
+          <button class="btn1" onclick="display()"> event handler </button>
+
+          <button class="btn2"> event listener</button>
+     </header>
+
+
+     <section>
+         
+         <div class="card" onclick="hello1()" onclick="hello2()">
+             <h2> card1</h2>
+             <p> Lorem ipsum dolor sit amet consectetur.</p>
+         </div>
+         <div class="card">
+           
+         </div>
+         <div class="card">
+             <h2> card3</h2>
+             <p> Lorem ipsum dolor sit amet consectetur.</p>
+         </div>
+     </section>
+
+
+     <article>
+         
+            <h2> keyboard event</h2>
+           <input type="text" placeholder="enter something" id="inp1">
+
+           <div class="output">
+
+           </div>
+     </article>
+
+     <script src="./event2.js"></script>
+</body>
+</html>
