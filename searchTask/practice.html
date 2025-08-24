@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         header{
+            height: 60px;
+            background-color: #212121;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+         }
+
+         header > input{
+            padding: 10px;
+            width: 50%;
+            border-radius: 10px;
+            outline:none;
+         }
+
+         input::placeholder{
+            font-size: 16px;
+         }
+
+         header > input:focus{
+            border-color: blue;
+         }
+
+         main{
+           
+            padding: 30px 40px;
+            background-color: ghostwhite;
+         }
+
+
+         main > ol{
+            background-color: white;
+            box-shadow: 0px 4px 6px black;
+            border-radius: 10px;
+            padding: 10px;
+         }
+
+         ol > li{
+            padding: 4px;
+            border-radius: 2px;
+            list-style: none;
+            margin-bottom: 5px;
+            box-shadow: 0px 2px 2px rgba(0,0,0,0.4);
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            cursor: pointer;
+         }
+
+
+         ol > li:nth-child(2n)
+         {
+            background-color: bisque;
+
+         }
+
+         ol > li:nth-child(2n):hover{
+            background-color: rgb(226, 198, 164);;
+         }
+         ol > li:nth-child(2n+1)
+         {
+            background-color: aliceblue;
+         }
+         ol > li:nth-child(2n+1):hover
+         {
+            background-color: rgb(212, 230, 245);
+         }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+
+        <input type="text" placeholder="search product"> 
+    </header>
+    
+    <main>
+        
+        <ol>
+             
+        </ol>
+    </main>
+    
+    <script src="./practice.js"></script>
+</body>
+</html>
